@@ -40,4 +40,22 @@
 # Modelo Entidad Relación
 ![ER](./_images/ER_Diagram.drawio.png)
 
+> En orden de importancia: 
 
+## Device
+- Son los dispositivos que están categorizados (Ejemplo: Capturas de video, Mediciones de Equipos, Mediciones Manuales)
+
+## Feature
+- Se pueden crear (1 a n) features
+- Son las (caracteristicas, medidas, documentos, variables, etc) que se pueden asociar a un dispositivo
+- Se les asocian unidades de medida (m, kg, m2, etc)
+- Un usuario puede verificar un feature y su documentación asociada
+
+# Formulas
+- Se crean fórmulas para realizar calculos especificos sobre variables 
+- Se pueden tener diferentes versiones de la formulas y cálculos de las mismas
+- Ecuaciones paso a pasa de resultados previos, y con ellos realizar un nuevo cálculo
+
+# Document
+- Asociado un dispositivo
+- Categorizado 
