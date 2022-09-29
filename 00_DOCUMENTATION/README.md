@@ -59,3 +59,53 @@
 # Document
 - Asociado un dispositivo
 - Categorizado 
+
+
+# Automatización 
+- Automatizar de la granja
+- Cuanto pesa mi pez? comida vs proteina
+- Sustentable y economico
+- Criaderos mas cerca de las ciudades, menores costos
+- Camara para detectar el tamanho y salud de pez (computing vision)
+- Determinar cuando y cuanto puede vender
+
+
+# Algoritmo crecimiento y enfermedades
+- Teniendo en cuenta las mediciones de los instrumentos como: (Temperatura, Oxigeno, Profundidad, Claridad del agua, etc)
+- Determinar mortalidad
+- Enfermedades
+- Crecimiento
+- Conversión de gramos de comida en gramos de peso del pez
+
+# Algoritmos a entrenar:
+> A traves del procesamiento de imágenes y entrenamiento de modelos de aprendizaje, se propone implementar:
+
+## Algoritmos para determinar si es un pez y crop la imagen
+- Identificar un pez
+- Dejar en cuadro el pez
+  
+# Algoritmos para filtrado 
+- Eliminar las imagenes difusas, o no claras o oscuras
+  
+# Algoritmos identificación 
+- Identificar las partes de pez (aletas, tamano de la cabeza)
+- Determinar con las proporciones y correlación el tamanho del pez
+
+# Algoritmos para determinar si un pez esta enfermo
+- Deteccion de parasitos? Determinar el impacto de enfermedades en porcentaje en perdida de produccion, disminuir el trabajo de los granjero 
+- Identificar manchas
+- Parásitos
+- Con la deteccion de enfermades o parasitos. Mejores estrategias de prevencion de enfermedades; que porcentaje es %?
+
+# Algoritmo para determinar el peso
+- Como referencia un plano en 3D determinar la proporciones y peso
+  
+# Algoritmo para identificar individualmente cada pez
+- Realizar el conteo con reconocimiento facial de un pez, cada pez tiene la cara unica (manchas) 
+- Seguimiento del origen del pez con Blockchain trazabilidad del criador a la mesa
+  
+# Algoritmos para contar los pellets de comida y cuantos se van al fondo
+- Cuanto es el porcentaje de costo de la comida?
+- De lo pellets de alimentacion cuanto se aprovecha
+
+
