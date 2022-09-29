@@ -68,6 +68,9 @@
 - Criaderos mas cerca de las ciudades, menores costos
 - Camara para detectar el tamanho y salud de pez (computing vision)
 - Determinar cuando y cuanto puede vender
+- Reproducir las condiciones ideales para el desarrollo de la acuicultura (IA) 
+- Aumento de la productividad al mejorar la eficiencia alimentaria y el manejo de enfermedades en sus primeros estadios 
+- Favorece el nuestra animal al evitar estrés por la intervención permanente dentro de los estanques
 
 
 # Algoritmo crecimiento y enfermedades
