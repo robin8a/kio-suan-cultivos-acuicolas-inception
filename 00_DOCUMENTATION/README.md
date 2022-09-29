@@ -86,7 +86,7 @@
 # Algoritmos a entrenar:
 > A traves del procesamiento de imágenes y entrenamiento de modelos de aprendizaje, se propone implementar:
 
-# Algoritmo crecimiento
+## Algoritmo crecimiento
 - Teniendo en cuenta las mediciones de los instrumentos como: (Temperatura, Oxigeno, Profundidad, Claridad del agua, etc)
 - Determinar mortalidad
 - Enfermedades
@@ -99,30 +99,36 @@
 - Dejar en cuadro el pez
 - ![](./_images/pez_identificado.png)
   
-# Algoritmos para filtrado 
+## Algoritmos para filtrado 
 - Eliminar las imagenes difusas, o no claras o oscuras
   
-# Algoritmos identificación 
+## Algoritmos identificación 
 - Identificar las partes de pez (aletas, cabeza, otras partes)
 - ![](./_images/proprociones_aletas_cabeza.png)
 - Determinar con las proporciones y correlación el tamanho del pez
 
-# Algoritmos para determinar si un pez esta enfermo
+## Algoritmos para determinar si un pez esta enfermo
 - Deteccion de parasitos? Determinar el impacto de enfermedades en porcentaje en perdida de produccion, disminuir el trabajo de los granjero de tomas manuales
 - Identificar manchas
 - Identificar parásitos
 - Con la deteccion de enfermades o parasitos. Mejores estrategias de prevencion de enfermedades; que porcentaje es %?
 
-# Algoritmos identificación de comportamiento
+## Algoritmos identificación de comportamiento
 - Nivel de flotabilidad
 
-# Algoritmo para determinar el peso
+## Algoritmo para determinar el peso
 - Como referencia un plano en 3D determinar la proporciones y peso
   
-# Algoritmo para identificar individualmente cada pez
+## Algoritmo para identificar individualmente cada pez
 - Realizar el conteo con reconocimiento facial de un pez, cada pez tiene la cara unica (manchas), o manchas en el cuerpo
 - Seguimiento del origen del pez con Blockchain trazabilidad del criador a la mesa
   
-# Algoritmos para contar los pellets de comida y cuantos se van al fondo
+## Algoritmos para contar los pellets de comida y cuantos se van al fondo
 - Cuanto es el porcentaje de costo de la comida?
 - De lo pellets de alimentacion cuanto se aprovecha
+
+# Fuentes de datos (Entrenar para los algoritmos)
+- Mediciones de los dispositvos
+- Imágenes procesadas y filtradas
+- Videos
+- Mediciones de campo
