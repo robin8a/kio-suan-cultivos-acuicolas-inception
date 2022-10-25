@@ -132,3 +132,46 @@
 - Imágenes procesadas y filtradas
 - Videos
 - Mediciones de campo
+
+# Algoritmos 
+Cual algoritmo escoger para resolver un problema en especifico?
+Afinar los algoritmos, para lograr los mejores resultados
+
+## Evitar 
+- Identificar y prevenir sobre ajuste
+- Lograr resultado consistentes
+- Que los modelos sean escalable con datos masivos
+
+# Ingenieria de Datos (ETL)
+- Creacion de los repositorios de ML
+- Identificar e implementar la solucion de ingestion de datos
+- Identificar e implementar la solucion de transformacion de datos
+
+Almacenar => Transformar => Transmitir => Flujos de trabajo
+
+## Almacenar
+- S3 Data lakes
+- DynamoDB
+
+## Ciclo de vida
+- No es necesario definir en esta etapa un ciclo; con el objetivo de disminuir los costos de almacenamiento
+- Stardard Availability 99.99%, AZs >=3, Costo por 1000 request GET: $0.0004 POST: $0.005 USD
+- S3 tiene un durabilidad de 99.99999999999 == (11 9's)
+
+
+
+## Tranformar
+- Glue
+- Glue ETL
+
+## Transmision
+- Kinesis
+- Kenesis Video transmision
+
+## Workflows
+- Data pipelines
+- AWS Batch
+- Funciones paso a paso
+
+# Análisis Exploratorio de Datos
+- 
