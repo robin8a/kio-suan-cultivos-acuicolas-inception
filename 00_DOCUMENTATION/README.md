@@ -134,6 +134,35 @@
 - Mediciones de campo
 
 # Algoritmos 
+- Linear Learner
+- XGBoost
+- Seq2Seq
+- DeepAR
+  
+> Para establecer enfermedades de los basado en el comportamiento de los peces necesitamos hacer el seguimiento de los mismos
+
+## Establecer la verdad fundamental
+- No contamos con datos entrenados y necesitamos que primero sea generado por humanos, Ejemplo: 
+- Entrenar un modelo de clasificacion de imágenes de enfermedades, necesitamos etiquetar una cantidad considerable de imagenes antes de entrenar la red neuronal. Para nuestro casos de uso vamos a probar lo
+
+
+## CNN (Convolutional Neural Network)
+> Para la detección de peces y detección de enfermedades
+1. Simplificar la imagen con filtros 
+2. Escanear la imagen buscando bordes que correspondan al objeto que buscamos (pez, pellets de comida)
+3. Encontrar otros patrones para sabes que es un pez Ej. aletas, color, ojos
+4. Encuadrar la imagen
+5. Con el imagen identificada, correr CNN para identificar enfermedades 
+
+## RNN Recurrent Neural Network 
+- Predicción del futuro basado en un comportamiento pasado, aplica para identificar el comportamiento de un pez (tiene apetito, esta enfermo)
+- Secuencia a secuencia, predecir que tienen hambre los peces 
+
+## Confusion Matrix
+- Para determinar si es una Tilapia en (video/imagen)
+
+
+
 Cual algoritmo escoger para resolver un problema en especifico?
 Afinar los algoritmos, para lograr los mejores resultados
 
@@ -159,14 +188,13 @@ Almacenar => Transformar => Transmitir => Flujos de trabajo
 - S3 tiene un durabilidad de 99.99999999999 == (11 9's)
 
 
-
 ## Tranformar
 - Glue
 - Glue ETL
 
 ## Transmision
 - Kinesis
-- Kenesis Video transmision
+- Kenesis Video transmision, se usara principalmente 
 
 ## Workflows
 - Data pipelines

@@ -66,6 +66,3 @@
 - El pez se rasca su cuerpo con el estanque 
 - El color del pez se torna palido o gris
 
-
-
-  
