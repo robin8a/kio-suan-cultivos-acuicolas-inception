@@ -138,7 +138,31 @@
 - XGBoost
 - Seq2Seq
 - DeepAR
-  
+- BlazingText
+- Object2Vec
+- Object Detection
+- Image Classification
+- Semantic Segmentation
+- Random Cut Forest
+- Neural Topic Model
+- LDA (Latent Dirichlet Allocation)
+- KNN (K-Nearest-Nieghbors)
+- K-Means
+- PCA (Principal Component Analysis)
+- Factorization Machines
+- IP Insights
+- Reinforment Learning
+
+
+# Servicios AWS AI/ML 
+- Amazon Transcribe
+- Amazon Polly
+- Rekognition (x)
+- Amazon Forecast (x)
+- Amazon Lex
+- Amazon Personalize
+- 
+
 > Para establecer enfermedades de los basado en el comportamiento de los peces necesitamos hacer el seguimiento de los mismos
 
 ## Establecer la verdad fundamental
