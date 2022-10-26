@@ -133,27 +133,6 @@
 - Videos
 - Mediciones de campo
 
-# Algoritmos 
-- Linear Learner
-- XGBoost
-- Seq2Seq
-- DeepAR
-- BlazingText
-- Object2Vec
-- Object Detection
-- Image Classification
-- Semantic Segmentation
-- Random Cut Forest
-- Neural Topic Model
-- LDA (Latent Dirichlet Allocation)
-- KNN (K-Nearest-Nieghbors)
-- K-Means
-- PCA (Principal Component Analysis)
-- Factorization Machines
-- IP Insights
-- Reinforment Learning
-
-
 # Servicios AWS AI/ML 
 - Amazon Transcribe
 - Amazon Polly
@@ -161,39 +140,14 @@
 - Amazon Forecast (x)
 - Amazon Lex
 - Amazon Personalize
-- 
 
-> Para establecer enfermedades de los basado en el comportamiento de los peces necesitamos hacer el seguimiento de los mismos
+
+# AI / ML
 
 ## Establecer la verdad fundamental
-- No contamos con datos entrenados y necesitamos que primero sea generado por humanos, Ejemplo: 
-- Entrenar un modelo de clasificacion de imágenes de enfermedades, necesitamos etiquetar una cantidad considerable de imagenes antes de entrenar la red neuronal. Para nuestro casos de uso vamos a probar lo
+- No contamos con datos entrenados y necesitamos que primero sea generado por humanos Ej. las trayectorias que siguen los peces cuando tienen hambre, o cuando están en un cilo reproductivo o donde permacenen cuando están enfermos
+- Entrenar un modelo de clasificacion de imágenes de enfermedades, necesitamos etiquetar una cantidad considerable de imagenes antes de entrenar la red neuronal. Para nuestro casos de uso vamos a probar los modelos 
 
-
-## CNN (Convolutional Neural Network)
-> Para la detección de peces y detección de enfermedades
-1. Simplificar la imagen con filtros 
-2. Escanear la imagen buscando bordes que correspondan al objeto que buscamos (pez, pellets de comida)
-3. Encontrar otros patrones para sabes que es un pez Ej. aletas, color, ojos
-4. Encuadrar la imagen
-5. Con el imagen identificada, correr CNN para identificar enfermedades 
-
-## RNN Recurrent Neural Network 
-- Predicción del futuro basado en un comportamiento pasado, aplica para identificar el comportamiento de un pez (tiene apetito, esta enfermo)
-- Secuencia a secuencia, predecir que tienen hambre los peces 
-
-## Confusion Matrix
-- Para determinar si es una Tilapia en (video/imagen)
-
-
-
-Cual algoritmo escoger para resolver un problema en especifico?
-Afinar los algoritmos, para lograr los mejores resultados
-
-## Evitar 
-- Identificar y prevenir sobre ajuste
-- Lograr resultado consistentes
-- Que los modelos sean escalable con datos masivos
 
 # Ingenieria de Datos (ETL)
 - Creacion de los repositorios de ML
@@ -201,7 +155,7 @@ Afinar los algoritmos, para lograr los mejores resultados
 - Identificar e implementar la solucion de transformacion de datos
 
 Almacenar => Transformar => Transmitir => Flujos de trabajo
-
+ 
 ## Almacenar
 - S3 Data lakes
 - DynamoDB
@@ -211,6 +165,10 @@ Almacenar => Transformar => Transmitir => Flujos de trabajo
 - Stardard Availability 99.99%, AZs >=3, Costo por 1000 request GET: $0.0004 POST: $0.005 USD
 - S3 tiene un durabilidad de 99.99999999999 == (11 9's)
 
+# Análisis Exploratorio de Datos
+- Limpiar y preparar los datos para el modelo
+- Realizar ingenieria de características
+- Anlizar y visualizar los datos para ML
 
 ## Tranformar
 - Glue
@@ -226,4 +184,85 @@ Almacenar => Transformar => Transmitir => Flujos de trabajo
 - Funciones paso a paso
 
 # Análisis Exploratorio de Datos
-- 
+  
+## Ciencia de Datos
+- Scikit Learn
+- Distribución de los datos
+- Tendencias y temporaridad
+
+## Herramientas de análisis
+- Athena (Consultas)
+- Quicksight (Reportes de Negocio)
+- EMR (Elastic Map Reduce Service)
+- Apache Spark
+
+## Ingenieria de rasgos o características
+- Ingreso de datos: como completar registros incompletos?
+- Perfilar
+- Agrupación o categorización
+- Transformación de los registros: ajustar para los registros
+- Codificación en caliente
+- Escalamiento y normalización antes de entrenar mi modelo
+
+# Modelamiento
+- Problemas del negocio como un problema de ML
+- Seleccionar el modelo apropiado para resolver el problema de ML
+- Entrenar los modelos de ML
+- Realizar la optimización de los hyper-parametros
+- Evaluar los modelos de ML 
+
+## Deep Learning
+- Obtener el mejor redimiento
+### CNN (Convolutional Neural Network)
+> Para la detección de peces y detección de enfermedades
+1. Simplificar la imagen con filtros 
+2. Escanear la imagen buscando bordes que correspondan al objeto que buscamos (pez, pellets de comida)
+3. Encontrar otros patrones para sabes que es un pez Ej. aletas, color, ojos
+4. Encuadrar la imagen
+5. Con el imagen identificada, correr CNN para identificar enfermedades 
+
+### RNN Recurrent Neural Network 
+- Predicción del futuro basado en un comportamiento pasado, aplica para identificar el comportamiento de un pez (tiene apetito, esta enfermo)
+- Secuencia a secuencia, predecir que tienen hambre los peces 
+
+### Confusion Matrix
+- Para determinar si es una Tilapia en (video/imagen)
+
+Cual algoritmo escoger para resolver un problema en especifico?
+Afinar los algoritmos, para lograr los mejores resultados
+
+## Evitar 
+- Identificar y prevenir sobre ajuste
+- Lograr resultado consistentes
+- Que los modelos sean escalable con datos masivos
+- Tunning de las redes neuronales
+- Tecnicas de regularización: Intenta prevenir sobre ajuste, predicciones sobre datos que fueron entrenados, no tan bueno para datos que no se han visto antes
+
+## Sagemaker
+> IDE visual para ML, integra las funcionalidades y características que necesitamos para realizar la implementación
+> Manejar todo el flujo de trabajo de ML
+
+![Proceso Sagemaker](./_images/sagemaker_proceso.png)
+
+### Algoritmos 
+> En (x) los algoritmos que se van a probar o utilizar para los casos de uso
+
+- Linear Learner (x)
+- XGBoost: Arboles de desición
+- Seq2Seq: Traducciones
+- DeepAR (x):  Predicción
+- BlazingText: predecir etiquetas de un frase
+- Object2Vec: parecido a BlazingText para objetos
+- Object Detection (x)
+- Image Classification (x)
+- Semantic Segmentation (x): Clasificación de y etiqueta para las cajas de cada objeto clasificado
+- Random Cut Forest (x): detección de anomalias (comportamientos diferentes de los peces)
+- Neural Topic Model: organizar o clasificar archivos
+- LDA (Latent Dirichlet Allocation)
+- KNN (K-Nearest-Neighbors) (x): Clasificación simple, se pueden usar determinando un punto K y como se comportan los peces alrededor de ese punto. Se usa por ejemplo para determinar comportamientos en compras, fraude en exámenes
+- K-Means: Divide el grupo en K grupos
+- PCA (Principal Component Analysis): Reducción dimensional, 2D plot-distrubución
+- Factorization Machines: predicciones de click, recomendación de productos
+- IP Insights: detección de fraude por direcciones de IP
+- Reinforment Learning: entrenar juegos
+

@@ -18,10 +18,9 @@
 - Edwarsiellosis
 
 
-## Parasitos
+## Parásitos
+> Son más dificiles de detectar
 - Mycotoxicosis
-- 
-
 
 # Observacion de peces como
 - Nada
@@ -66,3 +65,33 @@
 - El pez se rasca su cuerpo con el estanque 
 - El color del pez se torna palido o gris
 
+
+
+# Prueba Etiquetar un pez Enfermo o Sano
+> Para establecer enfermedades de los basado en el comportamiento de los peces necesitamos hacer el seguimiento de los mismos
+
+## Proceso
+![S3 Bucket](./../_images/_etiquetas_personalizadas/002_dataset_tres.png)
+
+## Dataset (Conjunto de datos)
+- Para entrenar el modelo se definió dos etiquetas: healthy 30 imágenes y sick también con 30 imagénes
+- Las imágenes fueron tomadas de los resultados de búsqueda de google
+- La imágenes se subieron a un repositorio de AWS-S3
+
+![S3 Bucket](./../_images/_etiquetas_personalizadas/002_dataset_uno.png)
+![S3 Bucket](./../_images/_etiquetas_personalizadas/002_dataset_dos.png)
+![S3 Bucket](./../_images/_etiquetas_personalizadas/001_s3_bucket.png)
+
+
+## Entrenamiento
+### Completado
+![Completado](./../_images/_etiquetas_personalizadas/003_1_tranning_completed.png)
+### Precisin
+![Precisión](./../_images/_etiquetas_personalizadas/003_2_precision.png)
+### Evaluacion
+![Evaluación](./../_images/_etiquetas_personalizadas/003_3_evaluacion_modelo.png)
+
+## Resultados
+![R1](../_images/_etiquetas_personalizadas/003_4_resultado_1.png)
+![R2](../_images/_etiquetas_personalizadas/003_4_resultado_2.png)
+![R3](../_images/_etiquetas_personalizadas/003_4_resultado_3.png)
