@@ -85,16 +85,22 @@
 
 ## Entrenamiento
 
-### Completado
-> El proceso de entrenamiento 
+### Entrenamiento
+-  El proceso de entrenamiento depende del numero de imágenes que se le provea
+-  Se pueden realizar reentrenamiento con mayor numero de imágenes
+-  El proceso puede ser mayor a 30 minutos 
 ![Completado](./../_images/_etiquetas_personalizadas/003_1_tranning_completed.png)
 
 ### Precisión
-> 
+- Cuando se hacen los primeros entrenamiento la precisión y confidencia es bajo
+- A medida
 ![Precisión](./../_images/_etiquetas_personalizadas/003_2_precision.png)
 
-### Evaluación
-> Los 
+### Evaluación de los modelos
+> Hay tres tipos de resultados:
+- **true positive** es un pez enfermo, o es un pez sano
+- **false positive** no es un pez enfermo, pero por una mancha de luz en la imagen del pez determino que esta enfermo
+- **false negative** no es un pez y no esta enfermo
 ![Evaluación](./../_images/_etiquetas_personalizadas/003_3_evaluacion_modelo.png)
 
 ## Resultados
