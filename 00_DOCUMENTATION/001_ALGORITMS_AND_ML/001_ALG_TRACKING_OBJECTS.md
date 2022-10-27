@@ -8,7 +8,7 @@
 
 # Dataset
 
-## Peces en el estanque 
+## Seguimiento
 - Por cada pez se va a guardar la posición X, Y, Z durante un periodo t (tiempo), respecto a un punto de referencia K
 
 ## Comportamientos
