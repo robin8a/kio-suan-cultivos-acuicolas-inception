@@ -2,7 +2,7 @@
 - https://colombiatic.mintic.gov.co/679/articles-124767_recurso_1.pdf
 - https://app.cloudcraft.co/
   
-# Arquitectura de Hardware/Software
+# ANEXO_001 Arquitectura de Hardware/Software
 ![Componentes](./_images/arquitectura-webapp-cultivos-acuicolas-004.png)
 
 ## Captura de datos
@@ -46,7 +46,7 @@
 - Identicar imágenes
 
 
-# Modelo Entidad Relación
+# ANEXO_2 Modelo Entidad Relación
 ![ER](./_images/ER_Diagram.drawio.png)
 
 > En orden de importancia: 
@@ -70,7 +70,7 @@
 - Categorizado 
 
 
-# Automatización 
+# ANEXO_3 Automatización 
 - Automatizar de la granja
 - Cuanto pesa mi pez? 
 - Comida entregada vs proteina en el pez
@@ -142,8 +142,8 @@
 - Amazon Personalize
 
 
-# AI (Inteligencia Artificial) / ML (Machine Learning)
-> A continuación los macroprocesos que se llevan a cabo para resolver un problema o caso de uso
+# ANEXO_4 AI (Inteligencia Artificial) y ML (Machine Learning)
+> Macro procesos y subprocesos que se llevan a cabo para resolver un problema o caso de uso de machile learning
 
 ![Procesos](./_images/AI_ML_procesos.png)
 
@@ -151,16 +151,16 @@
 - No contamos con datos entrenados y necesitamos que primero sea generado por humanos Ej. las trayectorias que siguen los peces cuando tienen hambre, o cuando están en un cilo reproductivo o donde permacenen cuando están enfermos
 - Entrenar un modelo de clasificacion de imágenes de enfermedades, necesitamos etiquetar una cantidad considerable de imagenes antes de entrenar la red neuronal. Para nuestro casos de uso vamos a probar los modelos 
 
-# Ingenieria de Datos (ETL)
+# Ingeniería de Datos (ETL)
 - Extraer => Transformar => Cargar ETL
 - Almacenar => Transformar => Transmitir => Flujos de trabajo
-- Creacion de los repositorios de ML (Machine Learning)
-- Identificar e implementar la solucion de ingestion de datos
-- Identificar e implementar la solucion de transformacion de datos
+- Creación de los repositorios de ML (Machine Learning)
+- Identificar e implementar la solución de ingestion de datos
+- Identificar e implementar la solución de transformacion de datos
 
  
 ## Almacenar
-- S3 Data lakes: repositorio de archivos planos (csv, json, txt)
+- S3 Data lakes: repositorio de archivos planos (csv, json)
 - DynamoDB: Base de datos no relacional
 
 ### Ciclo de vida de los datos
@@ -168,16 +168,16 @@
 - Stardard Availability 99.99%, AZs >=3, Costo por 1000 request GET: $0.0004 POST: $0.005 USD
 - S3 tiene un durabilidad de 99.99999999999 == (11 9's)
 
-## Tranformar
+## Transformar
 > A través de un servicio serverless ETL (Extraer, Transformar, Cargar) fuentes datos a un objetivo o servicio de AWS
 - Glue ETL (Extraer, Transformar, Cargar)
 
 ## Transmision
-> El procesamiento de video e imáganes trasmitidos un servicio de transmisión de datos en tiempo real escalable y duradero que puede capturar de forma continua gigabytes de datos por segundo:
+> El procesamiento de video e imágenes trasmitidos un servicio de transmisión de datos en tiempo real escalable y duradero que puede capturar de forma continua gigabytes de datos por segundo:
 - Kinesis
 - Kenesis Video transmision, se usara principalmente 
 
-## Workflows
+## Flujos de Trabajo (Workflows)
 > AWS Data Pipeline es un servicio web que lo ayuda a procesar y mover datos de manera confiable entre diferentes servicios de computación y almacenamiento de AWS, así como fuentes de datos locales, a intervalos específicos. O a través de lotes (Batch), ó Funciones paso a paso.
 - Data pipelines
 - AWS Batch
@@ -185,8 +185,8 @@
 
 # Análisis Exploratorio de Datos
 - Limpiar y preparar los datos para el modelo
-- Realizar ingenieria de características
-- Anlizar y visualizar los datos para ML (Machine Learning)
+- Realizar ingeniería de características
+- Analizar y visualizar los datos para ML (Machine Learning)
 
 ## Ciencia de Datos
 - Scikit Learn: "Scikit-learn es una biblioteca de aprendizaje automático de software libre para el lenguaje de programación Python. Cuenta con varios algoritmos de clasificación, regresión y agrupamiento, incluidas máquinas de vectores de soporte."
@@ -199,7 +199,7 @@
 - EMR (Elastic Map Reduce Service)
 - Apache Spark
 
-## Ingenieria de rasgos o características
+## Ingeniería de rasgos o características
 - Ingreso de datos: como completar registros incompletos?
 - Perfilar
 - Agrupación o categorización
