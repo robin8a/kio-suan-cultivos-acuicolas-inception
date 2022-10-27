@@ -1,5 +1,0 @@
-- Imagen del proceso completo de ML
-- Siglas con el significado
-- Resaltar los algoritmos
-- Evaluación, ampliar info
-- Terminar calidad del agua

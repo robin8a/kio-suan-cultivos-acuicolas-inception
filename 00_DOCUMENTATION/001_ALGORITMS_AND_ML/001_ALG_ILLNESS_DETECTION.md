@@ -84,11 +84,17 @@
 
 
 ## Entrenamiento
+
 ### Completado
+> El proceso de entrenamiento 
 ![Completado](./../_images/_etiquetas_personalizadas/003_1_tranning_completed.png)
-### Precisin
+
+### Precisión
+> 
 ![Precisión](./../_images/_etiquetas_personalizadas/003_2_precision.png)
-### Evaluacion
+
+### Evaluación
+> Los 
 ![Evaluación](./../_images/_etiquetas_personalizadas/003_3_evaluacion_modelo.png)
 
 ## Resultados
