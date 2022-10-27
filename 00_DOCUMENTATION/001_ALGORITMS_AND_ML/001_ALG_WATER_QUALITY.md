@@ -1,4 +1,4 @@
-# Calidad del Agua
+# ANEXO_6 Calidad del Agua
 > El objetivo principal es el aseguramiento de condiciones de sanidad, inocuidad y de calidad. Para  los sistemas incorporados como recirculación de agua (RAS), Biofloc, alternativas nutricionales
 - Transformar y cargar (ETL) las mediciones de los equipos en los diferentes tanques de prueba
 - Correlacionar las mediciones de los instrumentos con los indices de rendimiento
@@ -28,7 +28,7 @@
 - Documentación a implementar: https://docs.aws.amazon.com/sagemaker/latest/dg/sms-video-object-tracking.html
 ![Marcación y seguimiento](../_images/_object_tracking/ot_predict_next.gif)
 
-# Dataset
+# Conjunto de datos (Dataset)
 - Concentración de oxígeno disuelto (DO)
 - Ph se mantendrá entre (6,5 a 8,5)
 - Dureza entre 50 y 350 ppm (Singh, 2013)

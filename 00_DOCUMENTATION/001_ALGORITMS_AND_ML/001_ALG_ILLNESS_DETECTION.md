@@ -85,7 +85,7 @@
 
 ## Entrenamiento
 
-### Entrenamiento
+### Entrenamiento del Modelo
 -  El proceso de entrenamiento depende del numero de imágenes que se le provea
 -  Se pueden realizar reentrenamiento con mayor numero de imágenes
 -  El proceso puede ser mayor a 30 minutos 

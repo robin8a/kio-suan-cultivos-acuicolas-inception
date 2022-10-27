@@ -1,4 +1,4 @@
-# Video Frame Object Tracking 
+# ANEXO_7 Seguimiento de objetos en un video (Video Frame Object Tracking) 
 > El objetivo principal es hacer el seguimiento individual de los peces y registrar la posición espacial (x, y, z), para determinar patrones de comportamiento de los peces
 
 
