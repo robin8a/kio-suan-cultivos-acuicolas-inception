@@ -1,6 +1,7 @@
 # Video Frame Object Tracking 
 # Referencias
-- - https://docs.aws.amazon.com/sagemaker/latest/dg/sms-video-object-tracking.html
+- Documentación a implementar: https://docs.aws.amazon.com/sagemaker/latest/dg/sms-video-object-tracking.html
+  
 # Dataset
 
 # Peces en el estanque 
@@ -10,6 +11,3 @@
 - Debemos contar con las trayectorias x, y, z que hace un pez cuando tiene hambre
 - Debemos contar con las trayectorias x, y, z que hace un pez cuando esta en un ciclo reproductivo
 - Debemos contar con las trayectorias x, y, z que hace un pez cuando esta enfermo
-
-
-

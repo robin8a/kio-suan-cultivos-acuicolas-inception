@@ -247,10 +247,10 @@ Afinar los algoritmos, para lograr los mejores resultados
 ### Algoritmos 
 > En (x) los algoritmos que se van a probar o utilizar para los casos de uso
 
-- Linear Learner (x)
+- Linear Learner (x): permite generar alertas sobre el conjunto de mediciones de los equipos (oxigeno, ph, etc.)
 - XGBoost: Arboles de desición
 - Seq2Seq: Traducciones
-- DeepAR (x):  Predicción
+- DeepAR (x):  Predicción de comportamiento
 - BlazingText: predecir etiquetas de un frase
 - Object2Vec: parecido a BlazingText para objetos
 - Object Detection (x)

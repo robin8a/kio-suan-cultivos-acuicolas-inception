@@ -93,5 +93,5 @@
 
 ## Resultados
 ![R1](../_images/_etiquetas_personalizadas/003_4_resultado_1.png)
-![R2](../_images/_etiquetas_personalizadas/003_4_resultado_2.png)
-![R3](../_images/_etiquetas_personalizadas/003_4_resultado_3.png)
+![R2](../_images/_etiquetas_personalizadas/003_5_resultado_2.png)
+![R3](../_images/_etiquetas_personalizadas/003_6_resultado_3.png)
