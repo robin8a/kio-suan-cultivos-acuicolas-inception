@@ -57,6 +57,7 @@
 - Acumulacion de comida no aprovechada: permite la proliferación de bacterias, toxinas y contaminación del agua (muertes masiva)
 
 ## Análisis comportamiento
+> Para establecer enfermedades de los peces basado en el comportamiento de los peces necesitamos hacer el seguimiento de los mismos
 - El pez esta cerca de la superficie jadeando por respirar: probable falta de oxigeno, mala circulación del agua, agallas dañadas, toxinas en el agua
 - El pez esta escondido: compañeros muy agresivos
 - El estres disminuye su sistema inmunologico
@@ -66,9 +67,7 @@
 - El color del pez se torna palido o gris
 
 
-
-# Prueba Etiquetar un pez Enfermo o Sano
-> Para establecer enfermedades de los basado en el comportamiento de los peces necesitamos hacer el seguimiento de los mismos
+# Prueba Etiquetar un pez Enfermo o Sano (imágenes)
 
 ## Proceso
 ![S3 Bucket](./../_images/_etiquetas_personalizadas/002_dataset_tres.png)
@@ -78,8 +77,13 @@
 - Las imágenes fueron tomadas de los resultados de búsqueda de google
 - La imágenes se subieron a un repositorio de AWS-S3
 
+### Creación del Dataset (Conjunto de datos)
+- Se crea el conjunto de datos, teniendo en cuenta que l 20% de las imágenes se van a usar para realizar las pruebas
 ![S3 Bucket](./../_images/_etiquetas_personalizadas/002_dataset_uno.png)
+### Estructura y etiquetas
+- Los nombres de las carpetas serán las etiquetas asignadas a cada imagen
 ![S3 Bucket](./../_images/_etiquetas_personalizadas/002_dataset_dos.png)
+### Carpetas = Etiquetas
 ![S3 Bucket](./../_images/_etiquetas_personalizadas/001_s3_bucket.png)
 
 
