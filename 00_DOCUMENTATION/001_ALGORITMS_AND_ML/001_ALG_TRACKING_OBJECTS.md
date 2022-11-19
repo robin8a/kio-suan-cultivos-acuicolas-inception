@@ -55,6 +55,7 @@
 - https://pyimagesearch.com/2018/11/12/yolo-object-detection-with-opencv/
 - https://www.folkstalk.com/tech/opencv-google-colab-with-code-examples/
 - https://www.youtube.com/watch?v=NFDqFPs5x9o
+- https://www.avenga.com/magazine/top-cloud-service-providers/
 
 
 ## 1. Introducción
@@ -129,7 +130,7 @@ La detección y seguimiento de objetos es una tecnología de visión computacion
 
 
 ## 3. Pruebas Procesamiento en la nube para el seguimiento de peces (nube/local)
-> Definir cual es la solución mas optima si procesar los videos localmente y subir los datos a la nube
+> Definir cual es la solución mas optima para el procesamiento los videos localmente o subir los datos a la nube, teniendo en cuenta costos, escalabilidad y portabilidad. Se realizarán pruebas con los 3 servicios de la nube mas populares: Amazon Web Services (AWS), Microsoft Azure y Google Cloud. También se harán pruebas con Raspberry Pi y librerias opensource para una solución local (en sitio), donde los datos crudos se transmitiran a la nube para ser procesados y entrenamos para determinar el comportamiento de los peces en los tanques.
 
 ## 3.1 Prueba en la nube con AWS
 1. Comprimir los videos: para un mejor rendimiento del procesamiento los videos deben estar comprimidos
@@ -157,7 +158,8 @@ La detección y seguimiento de objetos es una tecnología de visión computacion
 - Tensoflow
 - Tensoflow Lite
 - Single Shot Detection
-3. Pruebas funcionales con video en tiempo real, detecta humanos.
+3. Pruebas funcionales con video en tiempo real
+- Pruebas inciales detecta humanos y algunos objetos del entorno
 - Se debe entrenar el modelo para el seguimiento de peces
 
 
