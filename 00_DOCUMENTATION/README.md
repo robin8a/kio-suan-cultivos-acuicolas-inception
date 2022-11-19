@@ -191,7 +191,7 @@
 ## Ciencia de Datos
 - Scikit Learn: "Scikit-learn es una biblioteca de aprendizaje automático de software libre para el lenguaje de programación Python. Cuenta con varios algoritmos de clasificación, regresión y agrupamiento, incluidas máquinas de vectores de soporte."
 - Distribución de los datos
-- Tendencias y temporaridad
+- Tendencias y temporaridad: al ser seres vivos debemos tener en cuenta los ciclos temporales relacionados con las especies
 
 ## Herramientas de análisis
 - Athena: permite realizar Consultas sobre datos archivos planos como archivos separados por comas .csv o json para extraer datos
@@ -204,7 +204,7 @@
 - Perfilar
 - Agrupación o categorización
 - Transformación de los registros: ajustar para los registros
-- Codificación en caliente
+- Codificación en caliente: calculos de KPIs on fly, ejemplo (Tasa de crecimiento específico)
 - Escalamiento y normalización antes de entrenar mi modelo
 
 # Modelamiento
