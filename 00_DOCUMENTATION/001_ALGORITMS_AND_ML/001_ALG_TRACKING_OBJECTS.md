@@ -128,10 +128,10 @@ La detección y seguimiento de objetos es una tecnología de visión computacion
 - Es un tipo de arquitectura de red neuronal que se adapta bien a las tareas de clasificación de imágenes y detección de objetos.
 
 
-## Definir la solución mas óptima para escalamiento y minimos costos (nube/local)
+## 3. Pruebas Procesamiento en la nube para el seguimiento de peces (nube/local)
 > Definir cual es la solución mas optima si procesar los videos localmente y subir los datos a la nube
 
-## Prueba - Procesamiento en la nube para el seguimiento de peces con AWS
+## 3.1 Prueba en la nube con AWS
 1. Comprimir los videos: para un mejor rendimiento del procesamiento los videos deben estar comprimidos
 2. Subir los videos a la nube: se debe hacer de forma automática
 3. Definir los tiempo de captura 
@@ -144,7 +144,7 @@ La detección y seguimiento de objetos es una tecnología de visión computacion
 ![cuadro 3](_images/Screen%20Shot%202022-11-18%20at%208.30.42%20AM.png)
 ![cuadro 4](_images/Screen%20Shot%202022-11-18%20at%208.31.06%20AM.png)
 
-## Prueba - Procesamiento local para el seguimiento de peces
+## 3.2 Prueba - local con Raspberry Pi y PiCamera V2
 > Haciendo uso de raspberry pi y YOLO (Yoy only look once), como prueba de un equipo con los minimos recursos tanto de energía como de procesamiento para la instalación en sitio
 
 1. Instalacion de hardware y puesta en marcha del equipo y la cámara
@@ -157,7 +157,8 @@ La detección y seguimiento de objetos es una tecnología de visión computacion
 - Tensoflow
 - Tensoflow Lite
 - Single Shot Detection
-3. Pruebas con imágenes con peces
+3. Pruebas funcionales con video en tiempo real, detecta humanos.
+- Se debe entrenar el modelo para el seguimiento de peces
 
 
 # Comportamientos
