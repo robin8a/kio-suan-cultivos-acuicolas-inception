@@ -1,5 +1,5 @@
 # ANEXO_7 Seguimiento de objetos en un video (Video Frame Object Tracking) 
-> El objetivo principal es hacer el seguimiento individual de los peces y registrar la posición espacial (x, y, z), para determinar patrones de comportamiento de los peces
+> El objetivo principal es hacer el seguimiento individual de los peces y registrar la posición espacial (x, y, z), para determinar patrones de comportamiento de los peces.
 
 
 # Referencias
@@ -41,17 +41,30 @@
 - https://opensource.com/article/20/1/object-tracking-camera-raspberry-pi
 - https://medium.com/analytics-vidhya/object-detection-algorithm-yolo-v5-architecture-89e0a35472ef
 - https://www.mdpi.com/2410-3888/6/4/65/htm
+- https://www.infoworld.com/article/3278008/what-is-tensorflow-the-machine-learning-library-explained.html
+- https://www.tensorflow.org/resources/learn-ml/theoretical-and-advanced-machine-learning
+- http://introtodeeplearning.com/
+- http://introtodeeplearning.com/slides/6S191_MIT_DeepLearning_L3.pdf
+- https://opencv.org/
+- https://store.opencv.ai/ HW
+- https://medium.com/analytics-vidhya/best-open-source-and-free-custom-object-detection-python-repositories-libraries-3595446857e
+- https://www.analyticsvidhya.com/blog/2021/09/some-amazing-applications-of-opencv-library/#:~:text=OpenCV%20is%20a%20great%20tool,including%20python%2C%20java%20C%2B%2B.
+- https://medium.com/srcecde/opencv-with-aws-lambda-via-layers-27592696c32a
+- https://medium.com/analytics-vidhya/what-and-why-opencv-3b807ade73a0
+- https://www.analyticsvidhya.com/blog/2021/08/getting-started-with-object-tracking-using-opencv/
+- https://pyimagesearch.com/2018/11/12/yolo-object-detection-with-opencv/
+- https://www.folkstalk.com/tech/opencv-google-colab-with-code-examples/
+- https://www.youtube.com/watch?v=NFDqFPs5x9o
+
 
 ## 1. Introducción
-Este documento tiene como objetivo establecer las tecnologías, algoritmos y pruebas para la detección y seguimiento de objetos (peces), con los pilares principales: **portabilidad**, **escalabilidad** y **costo bajo**
+Este documento tiene como objetivo establecer las tecnologías, algoritmos y pruebas para el seguimiento de objetos (peces), con los pilares principales: **portabilidad**, **escalabilidad** y **costo bajo**. Lo anterior como insumos para el entrenamiento de los modelos preventivos y reactivos basado en el comportamiento de los peces. Por cada pez se va a guardar la posición X, Y, Z durante un periodo t (tiempo), respecto a un punto de referencia K
 
 ## 2. Tecnologias opensource o código abierto
 La detección y seguimiento de objetos es una tecnología de visión computacional, procesamiento de images y videos, deep learning, algoritmos de Machine learning. 
 - Para construir aplicaciones con Python, OpenCV, Tensorflow, Keras. 
-- Algoritmos o frameworks como: RetinaNet, YOLOv3, TinyYOLOv3 y conjunto de datos como COCO, Kitti Object Detection Dataset, Single-shot detector
+- Algoritmos o frameworks como: RetinaNet, YOLOv3, TinyYOLOv3 y conjunto de datos como COCO, Kitti Object Detection Dataset, Single-shot detector, PyTorch
 - Hardware: Raspberry Pi con PiCameraV2: es un mini computador que se usa para realizar pruebas de prototipos ya que cuenta con el sistema operativo Linux (Debian o Ubuntu) para la instalación de las librerias y programas necesarios para las tareas de detección y seguimiento de objetos. Adicionalmente cuenta con el modulo de cámara nativa Sony IMX219 8-megapixel
-
-### OpenCV
 
 
 ### YOLO (You Only Look Once)
@@ -61,12 +74,12 @@ La detección y seguimiento de objetos es una tecnología de visión computacion
 
 
 ### COCO conjunto de datos
-> El objeto común en contexto (COCO) es uno de los conjuntos de datos de imágenes etiquetadas a gran escala más populares disponibles para uso público. Representa un puñado de objetos que encontramos a diario y contiene anotaciones de imágenes en 80 categorías, con más de 1,5 millones de instancias de objetos
-> Es una libreria versatil y multiproposito para diferentes escenarios para el entrenamiento de modelos
-> 287.135 imágenes
-> Detección de puntos clave: COCO brinda acceso a más de 200 000 imágenes y 250 000 instancias de personas etiquetadas con puntos clave.
-
-> COCO es un conjunto de datos de subtítulos, segmentación y detección de objetos a gran escala. COCO tiene varias características:
+- El objeto común en contexto (COCO) es uno de los conjuntos de datos de imágenes etiquetadas a gran escala más populares disponibles para uso público. Representa un puñado de objetos que encontramos a diario y contiene anotaciones de imágenes en 80 categorías, con más de 1,5 millones de instancias de objetos
+- Es una libreria versatil y multiproposito para diferentes escenarios para el entrenamiento de modelos
+- 287.135 imágenes
+- Detección de puntos clave: COCO brinda acceso a más de 200 000 imágenes y 250 000 instancias de personas etiquetadas con puntos clave.
+  ![Puntos claves](_images/fishes-06-00065-g003-550.jpg)
+- COCO es un conjunto de datos de subtítulos, segmentación y detección de objetos a gran escala. COCO tiene varias características:
 
 - Segmentación de objetos
 - Reconocimiento en contexto
@@ -79,23 +92,46 @@ La detección y seguimiento de objetos es una tecnología de visión computacion
 - 250.000 personas con puntos clave
 
 ### Single-shot detector (SSD)
-> SSD es un tipo de arquitectura CNN especializada para la detección, clasificación y localización de cuadros delimitadores en tiempo real.
+- SSD es un tipo de arquitectura CNN especializada para la detección, clasificación y localización de cuadros delimitadores en tiempo real.
 ![Arquitectura de una red neuronal convolucional con un detector SSD](./_images/SDD_architecture.png)
+- Arquitectura de una red neuronal convolucional con un detector SSD, fuente: 
 
 ### TensorFlow: 
-> Código abierto para la programación de flujo de datos utilizado para el aprendizaje automático y el aprendizaje neuronal profundo.
+- TensorFlow es una biblioteca de código abierto compatible con Python para el cálculo numérico que hace que el aprendizaje automático y el desarrollo de redes neuronales sean más rápidos y sencillos.
+- Permite a los desarrolladores crear gráficos de flujos como nodos o series para ser procesados, cada nodo representa una operación matemática y cada conexión es un arreglo multidimensional o **tensor**
+![Función de costo, Tensorflow](_images/tensor_flow_cost_function.png)
+- Función de costo, fuente: Tensorflow.org
+- Potente experimentación para la investigación.
 
 ### OpenCV
-> Es una biblioteca de funciones de programación destinada principalmente a la visión artificial en tiempo real. Desarrollado originalmente por Intel, luego fue respaldado por Willow Garage y luego por Itseez. La biblioteca es multiplataforma y de uso gratuito bajo la licencia Apache 2 de código abierto
+- Es una biblioteca de funciones de programación destinada principalmente a la visión artificial en tiempo real. Desarrollado originalmente por Intel, luego fue respaldado por Willow Garage y luego por Itseez. La biblioteca es multiplataforma y de uso gratuito bajo la licencia **Apache 2 de código abierto**
+- Es una gran herramienta para el procesamiento de imágenes
+- Se instala en diferentes sistemas operavit (Linux, Windows, Android, Mac-OS)
+- Soporta diferentes lenguajes de programación como Python
+
+> Aplicaciones:
+- Kits de herramientas de características 2D y 3D
+- Estimación de egomoción
+- Sistema de reconocimiento facial
+- Reconocimiento de gestos
+- Interacción humano-computadora (HCI)
+- Robótica móvil
+- Comprensión de movimiento
+- Identificación de objetos
+- Segmentación y reconocimiento
+- Stereopsis stereo vision: percepción de profundidad a partir de 2 cámaras
+- Estructura del movimiento (SFM)
+- rastreo de movimiento
+- realidad aumentada
 
 ## Red neuronal convolucional: CNN 
-> Es un tipo de arquitectura de red neuronal que se adapta bien a las tareas de clasificación de imágenes y detección de objetos.
-- Por cada pez se va a guardar la posición X, Y, Z durante un periodo t (tiempo), respecto a un punto de referencia K
+- Es un tipo de arquitectura de red neuronal que se adapta bien a las tareas de clasificación de imágenes y detección de objetos.
+
 
 ## Definir la solución mas óptima para escalamiento y minimos costos (nube/local)
 > Definir cual es la solución mas optima si procesar los videos localmente y subir los datos a la nube
 
-## Prueba - Procesamiento en la nube para el seguimiento de peces
+## Prueba - Procesamiento en la nube para el seguimiento de peces con AWS
 1. Comprimir los videos: para un mejor rendimiento del procesamiento los videos deben estar comprimidos
 2. Subir los videos a la nube: se debe hacer de forma automática
 3. Definir los tiempo de captura 
@@ -110,10 +146,19 @@ La detección y seguimiento de objetos es una tecnología de visión computacion
 
 ## Prueba - Procesamiento local para el seguimiento de peces
 > Haciendo uso de raspberry pi y YOLO (Yoy only look once), como prueba de un equipo con los minimos recursos tanto de energía como de procesamiento para la instalación en sitio
-- Instalacion de hardaware y puesta en marcha del equipo y la cámara
-- Instalacion de la librerías necesarias para el seguimiento de objetos
-- Se realizó la prueba con la detección de humanos
-- Para el envio de los datos a repositorio en la nube
+
+1. Instalacion de hardware y puesta en marcha del equipo y la cámara
+![picameraV2](_images/raspberry_camera_install.png)
+2. Instalación y configuración  
+- Linux Debian
+- Python
+- OpenCV
+- Yolo
+- Tensoflow
+- Tensoflow Lite
+- Single Shot Detection
+3. Pruebas con imágenes con peces
+
 
 # Comportamientos
 - Debemos contar con las trayectorias x, y, z que hace un pez cuando tiene hambre (clicos de apetencia)
