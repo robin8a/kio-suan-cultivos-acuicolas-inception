@@ -125,7 +125,7 @@ La detección y seguimiento de objetos es una tecnología de visión computacion
 - rastreo de movimiento
 - realidad aumentada
 
-## Red neuronal convolucional: CNN 
+### Red neuronal convolucional: CNN 
 - Es un tipo de arquitectura de red neuronal que se adapta bien a las tareas de clasificación de imágenes y detección de objetos.
 
 
