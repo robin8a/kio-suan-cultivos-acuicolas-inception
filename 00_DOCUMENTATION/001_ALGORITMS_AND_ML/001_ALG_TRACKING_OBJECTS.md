@@ -184,3 +184,20 @@ aws rekognition detect-custom-labels \
   --image '{"S3Object": {"Bucket": "kiosuancultivosacuic6b8f0ee9fcbe45a9803254d820f65546-dev","Name": "fish_001.jpeg"}}' \
   --region us-east-1
 ```
+
+
+# Rekognition
+- https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/rekognition.html
+- https://docs.aws.amazon.com/rekognition/latest/customlabels-dg/ex-lambda.html
+
+
+```sh
+
+python client.py function_name s3://bucket/path/image.jpg
+
+s3://kiosuancultacuicv2bb5d71c6f2fe40ffaad66a34b8c47115340-dev/public/appetite_prediction/0010.png
+
+```
+
+
+- https://gist.github.com/Adobe-Android/7825cda6949a9fa55cd5707d8f3a5e28
