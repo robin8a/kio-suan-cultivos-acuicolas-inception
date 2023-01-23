@@ -8,3 +8,14 @@ hacen parte de ella las siguientes actividades:
 6. las tecnologías 4.0 incorporadas
 7. Desarrollar algoritmos de inteligencia artificial para la identificación de comportamientos de hambre y predicción de enfermedades
 8. Las demás actuaciones que sean estrictamente necesarias para el logro de los productos finales del respectivo objeto contractual y del proyecto identificado con BPIN No. 2021000100164 y que se encuentren en la órbita general del mismo.
+
+
+Alcance WIll
+
+Acuabox sea gratuita
+
+- Ingresar datos manuales
+- Herramienta manual de captura de datos
+- Genere alertas
+- Graficos de 
+- Offline, sincronizar. Datos, e imagenes

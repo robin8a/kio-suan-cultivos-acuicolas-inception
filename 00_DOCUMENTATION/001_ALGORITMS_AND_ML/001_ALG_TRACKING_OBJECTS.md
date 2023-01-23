@@ -167,3 +167,20 @@ La detección y seguimiento de objetos es una tecnología de visión computacion
 - Debemos contar con las trayectorias x, y, z que hace un pez cuando tiene hambre (clicos de apetencia)
 - Debemos contar con las trayectorias x, y, z que hace un pez cuando esta en un ciclo reproductivo
 - Debemos contar con las trayectorias x, y, z que hace un pez cuando esta enfermo
+
+
+
+# Tutoriales
+- [Index](https://aws.amazon.com/sagemaker/getting-started/)
+- [Tutorial completo de etiqueta de objetos](https://aws.amazon.com/getting-started/hands-on/machine-learning-tutorial-label-training-data/)
+- https://docs.aws.amazon.com/sagemaker/latest/dg/howitworks-nbexamples.html
+- https://docs.aws.amazon.com/sagemaker/latest/dg/sms-getting-started-step1.html
+
+
+# 
+```sh
+aws rekognition detect-custom-labels \
+  --project-version-arn "arn:aws:rekognition:us-east-1:036134507423:project/fish-illness-detection/version/fish-illness-detection.2022-10-26T14.57.51/1666814271805" \
+  --image '{"S3Object": {"Bucket": "kiosuancultivosacuic6b8f0ee9fcbe45a9803254d820f65546-dev","Name": "fish_001.jpeg"}}' \
+  --region us-east-1
+```

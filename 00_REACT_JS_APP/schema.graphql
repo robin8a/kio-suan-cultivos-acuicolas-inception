@@ -1,0 +1,184 @@
+# This "input" configures a global authorization rule to enable public access to
+# all models in this schema. Learn more about authorization rules here: https://docs.amplify.aws/cli/graphql/authorization-rules
+# Data Types https://docs.aws.amazon.com/appsync/latest/devguide/scalars.html
+input AMPLIFY { globalAuthRule: AuthRule = { allow: public } } # FOR TESTING ONLY!
+
+# Auth Models
+
+type User @model 
+{
+  id: ID!
+  name: String!
+  dateOfBirth: AWSDate
+  isProfileUpdated: Boolean!
+  addresss: String
+  cellphone: AWSPhone
+  role: String!
+  userDevices: [UserDevice] @hasMany(indexName: "byUser", fields: ["id"])
+  documents: [Document] @hasMany(indexName: "byUser", fields: ["id"])
+}
+
+type DocumentType @model {
+  id: ID!
+  name: String!
+  description: String!
+  documents: [Document] @hasMany(indexName: "byDocumentType", fields: ["id"])
+}
+
+type Document @model 
+  {
+  id: ID!
+  data: AWSJSON!
+  timeStamp: AWSTimestamp!
+  doc_hash: String
+  url: AWSURL
+  signed: String
+  isApproved: Boolean
+  status: String
+  isUploadedToBlockChain: Boolean
+  documentTypeID: ID! @index(name: "byDocumentType")
+  documentType: DocumentType @belongsTo(fields: ["documentTypeID"])
+  deviceFeatureID: ID! @index(name: "byDeviceFeature")
+  deviceFeature: DeviceFeature @belongsTo(fields: ["deviceFeatureID"])
+  userID: ID! @index(name: "byUser")
+  user: User @belongsTo(fields: ["userID"])
+}
+
+# Device Models
+
+type Category @model 
+{
+  id: ID!
+  name: String!
+  devices: [Device] @hasMany(indexName: "byCategory", fields: ["id"])
+  isSelected: Boolean
+}
+
+type Device @model 
+{
+  id: ID!
+  name: String!
+  description: String
+  isActive: Boolean!
+  counterNumberOfTimesBuyed: Int
+  amountToBuy: Float
+  order: Int
+  status: String
+  categoryID: ID! @index(name: "byCategory")
+  category: Category @belongsTo(fields: ["categoryID"])
+  images: [Image] @hasMany(indexName: "byDevice", fields: ["id"])
+  deviceFeatures: [DeviceFeature] @hasMany(indexName: "byDevice", fields: ["id"])
+  userDevices: [UserDevice] @hasMany(indexName: "byDevice", fields: ["id"])
+}
+
+type Image @model 
+{
+  id: ID!
+  imageURL: String!
+  format: String!
+  title: String
+  imageURLToDisplay: String
+  isOnCarousel: Boolean
+  carouselLabel: String
+  carouselDescription: String
+  isActive: Boolean!
+  order: Int
+  deviceID: ID! @index(name: "byDevice")
+  device: Device @belongsTo(fields: ["deviceID"])
+}
+
+type FeatureType @model {
+  id: ID!
+  name: String!
+  description: String
+  features: [Feature] @hasMany(indexName: "byFeatureType", fields: ["id"])
+}
+
+type Feature @model 
+{
+  id: ID!
+  name: String!
+  description: String
+  isTemplate: Boolean
+  defaultValue: Float
+  featureTypeID: ID @index(name: "byFeatureType")
+  featureType: FeatureType @belongsTo(fields: ["featureTypeID"])
+  unitOfMeasureID: ID @index(name: "byUnitOfMeasure")
+  unitOfMeasure: UnitOfMeasure @belongsTo(fields: ["unitOfMeasureID"])
+  deviceFeatures: [DeviceFeature] @hasMany(indexName: "byFeature", fields: ["id"])
+  featureFormulas: [FeatureFormula] @hasMany(indexName: "byFeature", fields: ["id"])
+}
+
+# Formulas
+type UnitOfMeasure @model {
+  id: ID!
+  engineeringUnit: String!
+  description: String
+  isFloat: Boolean
+  features: [Feature] @hasMany(indexName: "byUnitOfMeasure", fields: ["id"])
+  formulas: [Formula] @hasMany(indexName: "byUnitOfMeasure", fields: ["id"])
+}
+
+type Formula @model 
+{
+  id: ID!
+  varID: String!
+  equation: String!
+  unitOfMeasureID: ID @index(name: "byUnitOfMeasure")
+  unitOfMeasure: UnitOfMeasure @belongsTo(fields: ["unitOfMeasureID"])
+  results: [Result] @hasMany(indexName: "byFormula", fields: ["id"])
+  featureFormulas: [FeatureFormula] @hasMany(indexName: "byFormula", fields: ["id"])
+}
+
+type FeatureFormula @model {
+  id: ID!
+  featureID: ID! @index(name: "byFeature")
+  feature: Feature @belongsTo(fields: ["featureID"])
+  formulaID: ID! @index(name: "byFormula")
+  formula: Formula @belongsTo(fields: ["formulaID"])
+}
+
+type Result @model 
+{
+  id: ID!
+  varID: String!
+  value: Float
+  formulaID: ID! @index(name: "byFormula")
+  formula: Formula @belongsTo(fields: ["formulaID"])
+  deviceFeatureResults: [DeviceFeatureResult] @hasMany(indexName: "byResult", fields: ["id"]) 
+}
+
+type DeviceFeature @model 
+{
+  id: ID!
+  value: String
+  isToBlockChain: Boolean
+  isVerifable: Boolean
+  order: Int
+  isOnMainCard: Boolean
+  dateTimestamp: AWSTimestamp
+  deviceID: ID! @index(name: "byDevice")
+  device: Device @belongsTo(fields: ["deviceID"])
+  featureID: ID! @index(name: "byFeature")
+  feature: Feature @belongsTo(fields: ["featureID"])
+  documents: [Document] @hasMany(indexName: "byDeviceFeature", fields: ["id"])
+  deviceFeatureResults: [DeviceFeatureResult] @hasMany(indexName: "byDeviceFeature", fields: ["id"]) 
+}
+
+type DeviceFeatureResult @model {
+  id: ID!
+  isActive: Boolean!
+  deviceFeatureID: ID @index(name: "byDeviceFeature")
+  deviceFeature: DeviceFeature @belongsTo(fields: ["deviceFeatureID"])
+  resultID: ID @index(name: "byResult")
+  result: Result @belongsTo(fields: ["resultID"])
+}
+
+type UserDevice @model {
+  id: ID!
+  isFavorite: Boolean
+  userID: ID! @index(name: "byUser")
+  user: User @belongsTo(fields: ["userID"])
+  deviceID: ID! @index(name: "byDevice")
+  device: Device @belongsTo(fields: ["deviceID"])
+}

@@ -270,3 +270,31 @@
 - IP Insights: detección de fraude por direcciones de IP
 - Reinforment Learning: entrenar juegos
 
+
+# Sagemaker image labeling
+
+- https://docs.aws.amazon.com/sagemaker/latest/dg/howitworks-nbexamples.html
+- https://sagemaker-examples.readthedocs.io/en/latest/introduction_to_amazon_algorithms/object_detection_birds/object_detection_birds.html
+
+
+# aws sagemaker object labeling on image
+- [Video tutorials](https://us-east-1.console.aws.amazon.com/sagemaker/home?region=us-east-1#/tutorials)
+- [Works, woman tutorial](https://www.youtube.com/watch?v=_FPI6KjDlCI)
+- https://www.youtube.com/watch?v=z1g6m3AqNYM
+- https://www.youtube.com/watch?v=cfq4-NLWTt4Y
+
+- https://www.youtube.com/watch?v=R0vC31OXt-g
+
+
+# URL function Rekognition
+- [Doc oficial](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/rekognition.html)
+- https://docs.aws.amazon.com/cli/latest/reference/rekognition/detect-custom-labels.html
+- [AWS Lambda - get query parameters, request body using Python environment](https://www.youtube.com/watch?v=mFzr8IECehw)
+
+# Calculate the location of the object detected
+
+- [Buen ejemplo](https://github.com/awsdocs/amazon-rekognition-developer-guide/blob/master/doc_source/images-displaying-bounding-boxes.md)
+
+# AWS amplify, upload a file in a specific object in S3
+
+- [How to Specify Storing Path in AWS Amplify in Android.?](https://stackoverflow.com/questions/59968236/how-to-specify-storing-path-in-aws-amplify-in-android#:~:text=If%20you%20want%20to%20upload,uploadFile()%20.)
