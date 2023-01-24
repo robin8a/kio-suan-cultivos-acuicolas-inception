@@ -38,3 +38,13 @@
 - Alcalinidad 0,1 a 0,2 mg/L
 - Dióxido de carbono < a 20 mg/L
 - Nivel de agua
+
+
+# Raspberry Pi
+
+- https://littlebirdelectronics.com.au/guides/22/temperature-and-humidity-sensor-with-raspberry-pi
+
+
+# Python
+
+- https://www.geeksforgeeks.org/get-post-requests-using-python/
