@@ -1,0 +1,51 @@
+query MyQuery {
+  listDevices {
+    items {
+      id
+      name
+    }
+  }
+}
+
+{
+  "data": {
+    "listDevices": {
+      "items": [
+        {
+          "id": "e9f71d4f_72f9_49ca_9512_07275c220cbf",
+          "name": "met_tanque_01"
+        }
+      ]
+    }
+  }
+}
+
+query MyQuery {
+  getDevice(id: "e9f71d4f_72f9_49ca_9512_07275c220cbf") {
+    deviceFeatures {
+      items {
+        dateTimestamp
+        value
+      }
+    }
+  }
+}
+
+{
+  "data": {
+    "getDevice": {
+      "deviceFeatures": {
+        "items": [
+          {
+            "dateTimestamp": null,
+            "value": "test"
+          },
+          {
+            "dateTimestamp": 1674651240000,
+            "value": "19"
+          }
+        ]
+      }
+    }
+  }
+}

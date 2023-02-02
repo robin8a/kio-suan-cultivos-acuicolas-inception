@@ -298,3 +298,8 @@
 # AWS amplify, upload a file in a specific object in S3
 
 - [How to Specify Storing Path in AWS Amplify in Android.?](https://stackoverflow.com/questions/59968236/how-to-specify-storing-path-in-aws-amplify-in-android#:~:text=If%20you%20want%20to%20upload,uploadFile()%20.)
+
+
+# 
+- https://docs.amplify.aws/guides/functions/graphql-from-lambda/q/platform/js/#query
+- https://gist.github.com/kcwinner/20742479a42d9caa9b4a006504289c9f
