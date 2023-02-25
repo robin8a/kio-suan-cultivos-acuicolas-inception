@@ -15,7 +15,7 @@ def lambda_handler(event, context):
     # Testing de Model
     bucket='kiosuancultacuicv2bb5d71c6f2fe40ffaad66a34b8c47115340-dev'
     key='public/appetite_prediction/'+json_body['photo']
-    model='arn:aws:rekognition:us-east-1:036134507423:project/fish-illness-detection/version/fish-illness-detection.2022-10-26T14.57.51/1666814271805'
+    # model='arn:aws:rekognition:us-east-1:036134507423:project/fish-illness-detection/version/fish-illness-detection.2022-10-26T14.57.51/1666814271805'
     min_confidence=50
 
     detected_labels = detect_labels(bucket, key, min_confidence)
