@@ -117,3 +117,18 @@ def pass_hours_last_time_feeding(p_device_id)
         }
     """
     res = appsync.query(query, { 'input': input })
+
+
+query MyQuery {
+  getDevice(id: "e9f71d4f_72f9_49ca_9512_07275c220cbf") {
+    id
+    name
+    deviceFeatures {
+      items {
+        featureID
+        dateTimestamp
+        value
+      }
+    }
+  }
+}
