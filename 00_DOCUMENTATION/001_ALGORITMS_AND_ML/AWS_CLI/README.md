@@ -16,6 +16,10 @@ aws dynamodb put-item \
     --item \
         '{"id": {"S": "1679369062_e9f71d4f_72f9_49ca_9512_07275c220cbf"}, "dateTimestamp": {"N": "1679369062"}, "deviceID": {"S": "e9f71d4f_72f9_49ca_9512_07275c220cbf"}, "featureID": {"S": "N2"}, "value": {"S": "950"}}'
 
+aws dynamodb put-item \
+    --table-name DeviceFeature-yqpez3p3ufgjlaxina465nwpri-dev  \
+    --item \
+    '{"id": {"S": "1679376001_e9f71d4f_72f9_49ca_9512_07275c220cbf_temperatura_agua"}, "dateTimestamp": {"N": "1679376001"}, "deviceID": {"S": "e9f71d4f_72f9_49ca_9512_07275c220cbf"}, "featureID": {"S": "temperatura_agua"}, "value": {"S": "23.6"}}'
 
 ```
 
